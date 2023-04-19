@@ -1,12 +1,16 @@
 [submodule "list-comprehension-demos"]
 	path = list-comprehension-demos
 	url = https://github.com/openscad/list-comprehension-demos.git
+	branch = master
 [submodule "threadlib"]
 	path = threadlib
 	url = https://github.com/adrianschlatter/threadlib.git
+	branch = develop
 [submodule "IoP-satellite"]
 	path = IoP-satellite
 	url = https://github.com/MisterHW/IoP-satellite.git
+	branch = master
 [submodule "scad-utils"]
 	path = scad-utils
 	url = https://github.com/openscad/scad-utils.git
+	branch = master
