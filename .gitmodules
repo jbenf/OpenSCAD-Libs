@@ -7,3 +7,6 @@
 [submodule "IoP-satellite"]
 	path = IoP-satellite
 	url = https://github.com/MisterHW/IoP-satellite.git
+[submodule "scad-utils"]
+	path = scad-utils
+	url = https://github.com/openscad/scad-utils.git
