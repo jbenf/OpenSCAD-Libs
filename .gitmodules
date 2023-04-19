@@ -1,0 +1,9 @@
+[submodule "list-comprehension-demos"]
+	path = list-comprehension-demos
+	url = https://github.com/openscad/list-comprehension-demos.git
+[submodule "threadlib"]
+	path = threadlib
+	url = https://github.com/adrianschlatter/threadlib.git
+[submodule "IoP-satellite"]
+	path = IoP-satellite
+	url = https://github.com/MisterHW/IoP-satellite.git
