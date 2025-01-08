@@ -51,3 +51,40 @@ module slice(x1=0,x2=10,n=1,scale=1.0){
         }
     }
 }
+
+/**
+  arguments:
+    - size: cube size as array
+    - center: center the cube
+    - centerXY: center the cube in the XY plane
+    - r: corner radius
+    - flat: only round sides, top and bottom flat
+ */
+module rounded_cube(size, center=false, centerXY=false, r=3, flat=false) {
+    centerXY = center ? true : centerXY;
+    if(flat) {
+        hull() {
+            for ( x = [0 : 1] ){
+                for ( y = [0 : 1] ){
+                    translate([
+                        r+x*(size[0]-2*r)-(centerXY ? size[0]/2 : 0),
+                        r+y*(size[1]-2*r)-(centerXY ? size[1]/2 : 0),
+                        -(center ? size[2]/2 : 0)]) cylinder(h = size[2], r=r);
+                }
+            }
+        }
+    } else {
+        hull() {
+            for ( x = [0 : 1] ){
+                for ( y = [0 : 1] ){
+                    for ( z = [0 : 1] ){
+                        translate([
+                            r+x*(size[0]-2*r)-(centerXY ? size[0]/2 : 0),
+                            r+y*(size[1]-2*r)-(centerXY ? size[1]/2 : 0),
+                            r+z*(size[2]-2*r)-(center ? size[2]/2 : 0)]) sphere(r=r);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,10 @@
 
     git submodule update --init
 
+## Usage
+
+    use <utils.scad>
+
 ## Modules
 
 ###  circle_arc(d = 20, a1 = 0, a2 = 360)
@@ -31,3 +35,14 @@ example:
     slice(21.5, 45, 10)
     rotate([0,90,0]) // Slice works along the x-axis, rotation might be needed
     import("./hexB_keyhole_5x3x90mm_2.5mm-wall_2mm-rim.stl");
+
+### rounded_cube(size, center=false, centerXY=false, r=3, flat=false)
+
+rounded cube
+
+arguments:
+  - size: cube size as array
+  - center: center the cube
+  - centerXY: center the cube in the XY plane
+  - r: corner radius
+  - flat: only round sides, top and bottom flat
