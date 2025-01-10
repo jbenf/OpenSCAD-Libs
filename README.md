@@ -46,3 +46,7 @@ arguments:
   - centerXY: center the cube in the XY plane
   - r: corner radius
   - flat: only round sides, top and bottom flat
+
+### hsw_peg(h=10, d1=15.4, d2=14.9)
+
+Peg for the Honeycomb Storage Wall. 

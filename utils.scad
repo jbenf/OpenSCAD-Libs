@@ -88,3 +88,14 @@ module rounded_cube(size, center=false, centerXY=false, r=3, flat=false) {
         }
     }
 }
+
+
+module hsw_peg(h=10, d1=15.4, d2=14.9) {
+    difference() {
+        hull() {
+            cylinder(d=d1, h=h/2, $fn=6);
+            translate([0,sin(60)*(d1-d2)/2,0]) cylinder(d=d2, h=h, $fn=6);
+        }
+        cylinder(d=3.7, h=2*h-2, center=true, $fn=60);
+    }
+}
